@@ -4,6 +4,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Landing Page */
+
+/* Landing Page - Left */
 .bg{
     display: flex;
 }
@@ -24,10 +27,35 @@ body{
     background-color: rgb(1, 58, 1, 0.5);
 }
 
+/* Landing Page - Right */
+
 .contentPageRight{
    background-color: white;
    height: 100vh;
    width: 50%;
    box-shadow: 0px 0px 20px rgb(1, 58, 1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
    
+   text-align: center;
+   
+}
+
+#createCourse{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding-bottom: 10px;
+}
+
+/* Student Login */
+.studentLogin{
+    background-color: rgb(1, 58, 1);
+    color: white;
+    width: 60%;
+    height: 500px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px gray;
 }
