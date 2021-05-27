@@ -20,7 +20,7 @@ body{
 }
 
 .topNav{
-    background-color: gray;
+    background-color: rgb(1, 58, 1);
     box-shadow: 0px 0px 10px black;
     height: 12vh;
     color: white;
@@ -91,16 +91,50 @@ body{
 
 /* Student Login */
 .studentLogin{
-    color: white;
-    background-color: gray;
+    color: black;
+    background-color: rgba(1, 58, 1, 0.219);
     width: 80%;
-    height: 300px;
+    height: auto;
     padding: 20px;
+    border-radius: 4px;
    
    
     
 }
+.studentLogin h3{
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    margin: 0px;
+   
+}
 .studentLogin div{
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+}
+
+.studentLogin form label{
+    text-align: left;
+}
+
+.studentLogin form input{
+    height: 40px;
+    border: none;
+    
+}
+.studentLogin form button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(1, 58, 1);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    
+}
+
+#google{
+    background-color: blue;
 }
