@@ -20,14 +20,15 @@ body{
 }
 
 .topNav{
-    background-color: rgb(1, 58, 1);
-    box-shadow: 0px 0px 15px gray;
+    background-color: gray;
+    box-shadow: 0px 0px 10px black;
     height: 12vh;
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
     align-items: center;
+    
     
 }
 
@@ -49,6 +50,9 @@ body{
     margin: 0px;
     padding: 0px;
     height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -60,12 +64,22 @@ body{
     background-color: rgb(1, 58, 1, 0.5);
 }
 
+.heroText{
+    width: 165px;
+    background-color: rgb(1, 58, 1, 0.5);
+    padding: 20px;
+    color: white;
+    border-radius: 4px;
+    
+}
+
 /* Landing Page - Right */
 
 .contentPageRight{
    background-color:white;
    box-shadow: 0px 0px 5px gray;
    width: 50%;
+   display: flex;
    justify-content: center;
    align-items: center;
    height: 88vh;
@@ -77,11 +91,16 @@ body{
 
 /* Student Login */
 .studentLogin{
-    background-color: white;
     color: white;
-    width: 60%;
+    background-color: gray;
+    width: 80%;
     height: 300px;
     padding: 20px;
-    border-radius: 4px;
+   
+   
     
+}
+.studentLogin div{
+    display: flex;
+    flex-direction: column;
 }
