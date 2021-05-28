@@ -25,7 +25,7 @@ body{
     align-items: center;
     position: relative;
     top: 0px;
-    width: 100%;
+    
 }
 .studentNav a {
     color: white;
@@ -60,7 +60,7 @@ body{
 /* Search Section */
 
 .searchQuestions{
-    width: 100%;
+    margin-top: 20px;
     padding: 20px;
 }
 
@@ -79,6 +79,10 @@ form div input{
     padding: 20px;
 }
 
+form div h2{
+    margin-bottom: 20px;
+}
+
 form a{
     color: rgb(1, 58, 1);
 }
@@ -88,7 +92,7 @@ form button{
     background-color:grey;
     color: white;
     border: none;
-    margin: 10px 0px;
+    margin: 20px 0px;
     border-radius: 4px;
 }
 
