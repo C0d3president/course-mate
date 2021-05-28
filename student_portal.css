@@ -1,0 +1,28 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.studentNav{
+    background-color: rgb(1, 58, 1);
+    box-shadow: 0px 0px 10px black;
+    height: 12vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+}
+.studentNav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
