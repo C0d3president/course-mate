@@ -94,8 +94,11 @@ form button{
 
 /* My Courses */
 .myCourses{
+    margin-top: 20px;
     padding: 0px 20px 20px 20px;
 }
+
+
 
 .folder a img{
     width: 200px;
