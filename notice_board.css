@@ -56,3 +56,16 @@ body{
     display: flex;
     align-items: center;
 }
+
+/* Board */
+
+.board{
+    background-color:  rgb(1, 58, 1);
+    border: 10px groove;
+    background-position: center;
+    width: 95%;
+    height: 400px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 5px gray;
+   
+}
