@@ -62,14 +62,15 @@ body{
 /* Filter Answers */
 
 .filterAnswers{
-    width: 100%;
+    
     display: flex;
     margin: 40px 20px;
+    
     
 }
 
 .filterAnswers input{
-    width: 80%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -104,6 +105,11 @@ body{
     margin-right: 20px;
 }
 
+#appendAnswers {
+    margin-left: 20px;
+    font-style: oblique;
+}
+
 #write {
     color: white;
     background-color: rgb(2, 110, 29);
@@ -114,6 +120,10 @@ body{
     color: white;
     background-color: rgb(75, 100, 24);
     border: none;
+}
+
+.questionAnswer form {
+    margin-left: 20px;
 }
 
 .questionAnswer form div input{
