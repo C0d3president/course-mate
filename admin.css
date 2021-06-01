@@ -14,19 +14,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
+    text-align: left;
     background-color: rgba(1, 58, 1);
     color: white;
+    
+    
 }
 
 .getStarted{
-    color: rgba(1, 58, 1);
+    width: 200px;
+    
 }
 
 .getStarted h2 {
 
     font-size: 40px;
     color: white;
+    
 }
 
 .getStarted p {
