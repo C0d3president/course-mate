@@ -48,6 +48,10 @@
     margin-top: 10px;
 }
 
+#sign_up {
+    box-shadow: 0px 0px 10px gray;
+}
+
 /* Content Page - Right */
 
 .contentPageRight{
