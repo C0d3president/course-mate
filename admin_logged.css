@@ -25,7 +25,8 @@ body{
     justify-content: space-between;
     padding: 0px 20px;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
     top: 0px;
     
 }
@@ -75,7 +76,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position: static;
+    margin-top: 12vh;
    
 }
 .signUp {
@@ -110,3 +112,6 @@ form button {
     color: white;
 }
 
+#upload{
+    background-color: rgb(211, 210, 210);
+}
