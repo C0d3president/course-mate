@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: black;
 }
 
 body{
@@ -57,3 +58,54 @@ body{
     display: flex;
     align-items: center;
 }
+
+/* Create Course */
+
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+      
+}
+
+.signUpContainer{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.signUp {
+    padding: 20px;
+    width: 50%;
+}
+
+form div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div input {
+    padding: 5px;
+  
+}
+
+#description {
+    height: 100px;
+    overflow: auto;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(1, 58, 1);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
