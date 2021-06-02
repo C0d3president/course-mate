@@ -1,0 +1,56 @@
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+      
+}
+
+.signUpContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.signUp {
+    padding: 20px;
+}
+
+form div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div input {
+    padding: 5px;
+  
+}
+
+.robot{
+    flex-direction: row;
+}
+
+.robot input {
+    margin-right: 20px;
+
+}
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(1, 58, 1);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+form p {
+    margin-top: 20px;
+}
+
+form p a {
+    color: rgb(1, 58, 1);
+}
