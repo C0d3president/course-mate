@@ -114,3 +114,63 @@ form button {
 #upload{
     background-color: rgb(211, 210, 210);
 }
+
+
+
+/* Nav Left */
+
+.navLeft {
+    width: 20%;
+    height: 100vh;
+    box-shadow: 0px 0px 10px gray;
+    position: fixed;
+    overflow: auto;
+    background-color: rgb(237, 240, 237);
+    
+}
+
+
+.navLeft h4 {
+    padding: 40px 20px 20px;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 20px;
+}
+
+.navLeft p {
+    padding: 10px 20px;
+}
+
+.navLeft p:hover {
+    background-color: rgba(128, 128, 128, 0.253);
+    border-radius: 4px;
+}
+
+
+/* Nav Right */
+
+.navRight{
+    width: 20%;
+    height: 100vh;
+    box-shadow: 0px 0px 10px gray;
+    position: fixed;
+    overflow: auto;
+    right: 0px;
+    background-color: rgb(237, 240, 237);
+    
+}
+
+.navRight h4 {
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 20px;
+}
+
+.navRight p {
+    padding: 10px 20px;
+    
+}
+
+.navRight p:hover {
+    background-color: rgba(128, 128, 128, 0.253);
+    border-radius: 4px;
+}
