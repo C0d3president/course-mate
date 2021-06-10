@@ -126,21 +126,22 @@ form button {
     position: fixed;
     overflow: auto;
     background-color: rgb(237, 240, 237);
+    
 }
 
 
 .navLeft h4 {
     padding: 40px 20px 20px;
     box-shadow: 0px 0px 5px gray;
+    margin-bottom: 20px;
 }
 
 .navLeft p {
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .navLeft p:hover {
     background-color: rgba(128, 128, 128, 0.253);
-    margin: 10px;
     border-radius: 4px;
 }
 
@@ -155,20 +156,21 @@ form button {
     overflow: auto;
     right: 0px;
     background-color: rgb(237, 240, 237);
-
+    
 }
 
 .navRight h4 {
-    padding: 40px 20px 20px;
+    padding: 40px 20px 20px 20px;
     box-shadow: 0px 0px 5px gray;
+    margin-bottom: 20px;
 }
 
 .navRight p {
-    padding: 20px;
+    padding: 10px 20px;
+    
 }
 
 .navRight p:hover {
     background-color: rgba(128, 128, 128, 0.253);
-    margin: 10px;
     border-radius: 4px;
 }
