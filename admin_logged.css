@@ -125,7 +125,7 @@ form button {
     box-shadow: 0px 0px 10px gray;
     position: fixed;
     overflow: auto;
-   
+    background-color: rgb(237, 240, 237);
 }
 
 
@@ -154,7 +154,7 @@ form button {
     position: fixed;
     overflow: auto;
     right: 0px;
-    
+    background-color: rgb(237, 240, 237);
 
 }
 
