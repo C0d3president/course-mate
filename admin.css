@@ -48,6 +48,11 @@
     margin-top: 10px;
 }
 
+.contentPageLeft div button:hover {
+    background-color: white;
+    color: rgb(1, 58, 1);
+}
+
 #sign_up {
     box-shadow: 0px 0px 10px gray;
 }
