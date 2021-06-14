@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Landing Page -->
+
+    <div class="landingContainer">
+            <!-- Top Nav -->
+
+        {% comment %} <div class="topNav">
+            <h1>Coursemate</h1>
+           
+            
+        </div> {% endcomment %}
+        <!-- Background -->
+        <div class="bg">
+            
+            <div class="bgImage" style="background-image: url('{% static "coursemate-images/bg-5.jpg" %}');" >
+                <div class="heroText">
+                    <h2>Problem Solved</h2>
+                    <p> Remote learning students now have an easy time as they learn</p>
+                </div>
+               
+            </div>
+            
+            <div class="contentPageRight">
+                <!-- Login Section -->
+                
+                <div class="studentLogin">
+                    <h3>Student Login</h3>
+                    {% for message in messages %}
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                                <div class="alert alert-success" >{{ message }}</div>
+                        {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                                <div class="alert alert-danger" >{{ message }}</div>
+                        {% endif %}
+                    {% endfor %}
+                    <form action="{% url 'login' %}" method="POST">
+                        {% csrf_token %}
+                        <div>
+                            <label id="email" for="Email" placeholder="Enter email">Enter School Email</label>
+                            <input name="email" required type="text">
+                        </div>
+                        <div>
+                            <label id="password" for="Password" placeholder="Enter Password">Enter Password</label>
+                            <input name="password" required type="password">
+                        </div>
+                        <button id="login" type="submit">Login</button>
+                        <button id="google">Login with Google</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+  
+{% endblock content %}

@@ -1,0 +1,7 @@
+  <div class="navLeft">
+
+        <h4>My Courses</h4>
+        {% for course in courses %}
+         <a href="/course/{{ course.id }}"><p id="myCourses">{{course.course_name}}</p></a>
+        {% endfor %}
+    </div>

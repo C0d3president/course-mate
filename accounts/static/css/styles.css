@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/* Landing Page */
+
+.landingContainer{
+    margin: 0px;
+    padding: 0px;
+  
+ 
+}
+
+.topNav{
+    background-color: rgb(1, 58, 1);
+    box-shadow: 0px 0px 10px black;
+    height: 12vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    
+    
+}
+
+.topNav a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Landing Page - Left */
+.bg{
+    display: flex;
+    
+}
+.bgImage{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bgImage h1 {
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    
+    background-color: rgb(1, 58, 1, 0.5);
+}
+
+.heroText{
+    width: 165px;
+    background-color: rgb(1, 58, 1, 0.5);
+    padding: 20px;
+    color: white;
+    border-radius: 4px;
+    
+}
+
+/* Landing Page - Right */
+
+.contentPageRight{
+   background-color:white;
+   box-shadow: 0px 0px 5px gray;
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 88vh;
+   text-align: center;
+   
+}
+
+
+
+/* Student Login */
+.studentLogin{
+    color: black;
+    background-color: rgba(1, 58, 1, 0.219);
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    border-radius: 4px;
+   
+   
+    
+}
+.studentLogin h3{
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    margin: 0px;
+   
+}
+.studentLogin div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.studentLogin form label{
+    text-align: left;
+}
+
+.studentLogin form input{
+    height: 40px;
+    border: none;
+    
+}
+.studentLogin form button{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(1, 58, 1);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    
+}
+
+#google{
+    background-color: blue;
+}

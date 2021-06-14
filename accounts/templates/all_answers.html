@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Questions and Answers from students -->
+
+    <div class="allAnswersContainer">
+
+         
+        <!-- Filter Answers -->
+
+        <div class="filterAnswers">
+            <input type="text" placeholder="Type here to filter answers by key words">
+            <button>Filter</button>
+        </div>
+
+        <!-- Question and Answer -->
+
+        <div class="questionAnswer">
+            
+            <h3>FAQ:</h3>
+            <br>
+            {% for message in messages %}
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                                <div class="alert alert-success" >{{ message }}</div>
+                        {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+            {% for question in questions %}
+                <p id="question">{{ question.quiz }} </p>
+                <div class="container">
+                    <!-- Append answers -->
+                    <div class="buttonFlex">
+                        <button id="view">View answers</button>
+                        <button id="write">Answer question</button>
+                    </div>
+                    
+                    {% comment %} {% for answer in answers %}
+                      <p id="appendAnswerssop">{{ answer.answer }}lll</p>
+                      <p>dscfsd</p>
+                    {% endfor %} {% endcomment %}
+                    <!-- Submit your Answer -->
+                    
+                    <form method="POST" action="{% url 'answer' %}">
+                    {% csrf_token %}
+                        <div>
+                            <label for="answer">Enter your answer</label>
+                            <input name="quiz_id" value="{{ question.id }}" type="hidden">
+                            <input name="answer" type="text">
+                        </div>
+                        <button type="submit" id="submit">Submit</button>
+
+                    </form>
+                </div>
+            {% endfor %}
+
+        </div>
+        
+    </div>
+
+{% endblock content %}
+    

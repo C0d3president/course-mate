@@ -1,0 +1,50 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <div class="signUpContainer">
+
+        <div class="signUp">
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success" >{{ message }}</div>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+            <form action="{% url 'signup' %}" method="POST">
+                 {% csrf_token %}
+                <h2>Fill in the form to create account</h2>
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label for="name">Username</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" required>
+                </div>
+                <div>
+                    <label for="number">Phone number</label>
+                    <input type="text" name="phone">
+                </div>
+                
+                <div class="robot">
+                    <input type="radio" id="robot" name="robot" value="robot">
+                    <label for="radio">I am not a robot</label>
+                </div>
+
+                <button type="submit" id="create">Create Account</button>
+
+                {% comment %} <p>Already have an account? <a href="admin.html">Login</a></p> {% endcomment %}
+                
+            </form>
+
+        </div>
+    </div>
+
+    <script src="sign_up.js"></script>
+
+{% endblock content %}

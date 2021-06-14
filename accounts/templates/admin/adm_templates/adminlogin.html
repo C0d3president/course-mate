@@ -1,0 +1,61 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <div class="adminContainer">
+
+
+
+        <!-- Content Left -->
+
+        <div class="contentPageLeft">
+
+            <div class="getStarted">
+
+                <h2>Get Started!</h2>
+                <br>
+                <p>This platform allows you to create a course, add staff, teach and manage students remotely the same way you would do it in a physical classroom. <br> </p>
+
+                <br>
+                <button id="sign_up">Sign Up</button>
+                
+            </div>
+            
+        </div>
+
+        <!-- Content Right -->
+
+        <div class="contentPageRight">
+            <!-- Login Section -->
+             
+           
+            <div class="studentLogin">
+                <h3>Admin Login</h3>
+                {% for message in messages %}
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success" >{{ message }}</div>
+                    {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+                <form action="{% url 'admin_login' %}" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <label id="email" for="Email"  placeholder="Enter email">Enter School Email</label>
+                        <input type="text" required name="email">
+                    </div>
+                    <div>
+                        <label id="password" for="Password" placeholder="Enter Password">Enter Password</label>
+                        <input type="password" required name="password">
+                    </div>
+                    <button type="submit" id="login">Login</button>
+            
+                    <button id="google">Login with Google</button>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+    
+
+{% endblock content %}

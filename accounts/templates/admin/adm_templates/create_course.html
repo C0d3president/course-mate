@@ -1,0 +1,29 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+    <div class="signUpContainer">
+
+        <div class="signUp">
+            {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success" >{{ message }}</div>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+            <form action="{% url 'create_course' %}" method="POST">
+                 {% csrf_token %}
+                <h2>Fill in the form to create Course</h2>
+                <div>
+                    <label for="name">Course Name</label>
+                    <input type="text" name="course-name" required>
+                </div>
+            
+                <button type="submit" id="create">Save</button>
+                
+            </form>
+
+        </div>
+    </div>
+
+{% endblock content %}

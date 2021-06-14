@@ -1,0 +1,55 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+   <!-- Administration Page -->
+
+    <!-- Nav Left -->
+    {% include 'admin/resource_sidebar.html' %}
+
+    <!-- Nav Right -->
+
+    <div class="navRight">
+        <h4>All Resources</h4>
+        <p id="courseInfo">Books</p>
+        <p id="courseInfo">Links</p>
+        <p id="courseInfo">Other</p>
+    </div> 
+
+    <div class="signUpContainer">
+
+        <div class="signUp">
+
+            {% comment %} <form action="submit">
+
+                <h2>Add resources</h2>
+                <div>
+                    <label for="name">Resource Title</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="name">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+              
+                <br>
+               
+
+             
+                <div>
+                    <label for="name">Add link (Optional)</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <input type="file" id="upload" name="Upload File">
+                </div>
+
+                <button type="submit" id="create">Create</button>
+
+                
+                
+            </form> {% endcomment %}
+
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="studentContainer">
+
+       
+        <!-- Search Questions -->
+        <div class="searchQuestions">
+
+             {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success" >{{ message }}</div>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+            <form action="{% url 'questions' %}"  method="post">
+            {% csrf_token %}
+                <div id="labelInputSearch">
+                    <h2>Ask a question</h2>
+                    <input name="question" type="text" required>
+                </div>
+                <button type="submit">Submit</button>
+                <a href="{% url 'faq' %}">See answers to questions asked by other students</a>
+            </form>
+            
+           
+        </div>
+
+        <!-- My Courses -->
+        <div class="myCourses">
+            <h2>My courses</h2>
+            <br>
+            <hr>
+            <br>
+            {% for course in courses %}
+                <div class="folder">
+                    <a href="myCourse"><img src="{% static 'coursemate-images/folder1.png' %}" alt="Course folder"></a>
+                    <p id="folderName">{{ course.course_name }}</p>  
+                </div>
+            {% endfor %}
+            
+        </div>
+
+    </div>
+   
+{% endblock content %}

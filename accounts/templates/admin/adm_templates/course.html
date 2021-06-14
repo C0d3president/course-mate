@@ -1,0 +1,116 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+   <!-- Administration Page -->
+
+    <!-- Nav Left -->
+    {% include 'admin/resource_sidebar.html' %}
+
+    <!-- Nav Right -->
+
+    <div class="navRight">
+
+        {% comment %} <h4>All Resources</h4>
+        <p id="courseInfo">Books</p>
+        <p id="courseInfo">Links</p>
+        <p id="courseInfo">Other</p> {% endcomment %}
+    </div> 
+
+    <div class="signUpContainer">
+             
+        <div class="signUp">
+           {% for message in messages %}
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success" >{{ message }}</div>
+                {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        <div class="alert alert-danger" >{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+            <h2>{{ course.course_name }}</h2>
+              <!-- modal button -->
+             <button type="button" class="btn btn-success mr-0" data-toggle="modal" data-target="#exampleModalCenter">
+              Add Module/Resource
+             </button>
+              <table class="table mt-3">
+                <thead>
+                    <tr>
+                    <th scope="col">Module code</th>
+                    <th scope="col">Module Name</th>
+                    <th scope="col">Other resources</th>
+                    <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {% for course_module in course_modules %}
+                    <tr>
+                    <th scope="row">{{ course_module.id }}</th>
+                    <td>{{ course_module.moduleName }}</td>
+                    <td>{{ course_module.link }}</td>
+                    <td><button type="button" class="btn btn-secondary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</button>
+                         <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+</button>
+                    </td>
+                    </tr>
+                 
+                   {% endfor %}
+                  
+                   
+                </tbody>
+                </table>
+             
+            
+
+        </div>
+    </div>
+
+<!-- -->
+    <!-- Form-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add resources</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <form action="{% url 'create_module' %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="name">Resource Title</label>
+                    <input type="text" name="module_name" required>
+                </div>
+                <div>
+                    <label for="name">Description</label>
+                    <textarea name="description" cols="30" rows="10" required></textarea>
+                </div>
+                <div>
+                    <input type="text" name="courseId" value="{{ course.id }}" required>
+                </div>
+              
+                <br>
+            
+                <div>
+                    <label for="name">Add link (Optional)</label>
+                    <input type="text" name="link" required>
+                </div>
+                <div>
+                    <input type="file" id="upload" name="Upload File">
+                </div>
+
+                <button type="submit">Create</button>
+
+                
+            </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
