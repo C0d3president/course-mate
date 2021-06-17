@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_logged</title>
+    <link rel="stylesheet" href="create_students.css">
+</head>
+<body>
+
+    <!-- Administration Page -->
+
+    <div class="adminContainer">
+
+          <!-- Top Nav -->
+          <div class="studentNav">
+
+            <h2>Logo</h2>
+            <div class="topRightStudent">
+                <a href="student_portal.html">Home</a>
+                <a href="contacts">Staff</a>
+               
+                <a href="create_timetable.html">Timetables</a>
+                <a href="admin_notice.html">Notice Board</a>
+                <a href="create_resources.html">Resources</a>
+                <a href="create_assignment.html">Assignments</a>
+                <a href="grades">Students</a>
+                <div class="studentProfile">
+                    <div class="profileImageStudent">
+
+                    </div>
+                    
+                </div>
+            </div>
+
+          
+            
+    </div>
+
+    <!-- Nav Left -->
+
+    <div class="navLeft">
+
+        <h4>Staff In Courses</h4>
+        <p id="myCourses">PHP</p>
+        <p id="myCourses">JavaScript</p>
+        <p id="myCourses">Data Science</p>
+    </div>
+
+    <!-- Nav Right -->
+
+    <div class="navRight">
+
+        <h4>Staff Info</h4>
+        <p id="courseInfo">All staff</p>
+        <p id="courseInfo">Departments</p>
+        <p id="courseInfo">Roles</p>
+        <p id="courseInfo">Staffroom</p>
+        <p id="courseInfo">Staff timetable</p>
+    </div>
+
+    <!-- Sign Up Container -->
+
+    <div class="signUpContainer">
+
+        <div class="signUp">
+
+            <form action="submit">
+
+                <h2>Add Staff</h2>
+                <div>
+                    <label for="name">First Name</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="name">Middle Name</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="name">Last Name</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label for="number">Phone Number</label>
+                    <input type="number">
+                </div>
+                <div>
+                    
+                    <label for="text">Roles</label>
+                    <select name="courses" id="coursesList">
+                        <option value="">Select role</option>
+                        <option value="">Super admin</option>
+                        <option value="">Give notice</option>
+                        <option value="">Accounts</option>
+                        <option value="">Add course</option>
+                        <option value="">View only</option>
+                        <option value="">Add staff</option>
+                        <option value="">Update course</option>
+                        <option value="">Add students</option>
+                        <option value="">Remove students</option>
+                    </select>
+                  
+                </div>
+                
+                <div>
+
+                    <label for="text">Course</label>
+                    <select name="courses" id="coursesList">
+                        <option value="">Select course</option>
+                        <option value="">All</option>
+                        <option value="">PHP</option>
+                        <option value="">JavaScript</option>
+                        <option value="">DataScience</option>
+                    </select>
+                  
+                </div>
+                
+                <div class="radioInput">
+                    
+                    <input type="radio">
+                    <label for="radio">Activate</label>
+                </div>
+             
+
+                <button type="submit" id="create">Add Staff</button>
+
+                
+                
+            </form>
+
+        </div>
+    </div>
+
+    
+    <script src="admin_logged.js"></script>
+</body>
+</html>
